@@ -18,7 +18,7 @@ from alot.commands import CommandParseError, COMMANDS
 from alot.utils import argparse as cargparse
 
 
-_SUBCOMMANDS = ['search', 'compose', 'bufferlist', 'taglist', 'pyshell']
+_SUBCOMMANDS = ['search', 'compose', 'bufferlist', 'taglist', 'pyshell', 'searchmessages']
 
 
 def parser():

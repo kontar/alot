@@ -36,6 +36,7 @@ class CommandCanceled(Exception):
 
 COMMANDS = {
     'search': {},
+    'searchmessages': {},
     'envelope': {},
     'bufferlist': {},
     'taglist': {},
