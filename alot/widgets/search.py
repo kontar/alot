@@ -12,6 +12,7 @@ from ..settings.const import settings
 from ..helper import shorten_author_string
 from .utils import AttrFlipWidget
 from .globals import TagWidget
+from .thread import MessageSummaryWidget
 
 
 class ThreadlineWidget(urwid.AttrMap):
@@ -184,3 +185,23 @@ class ThreadlineWidget(urwid.AttrMap):
         else:
             path.append('normal')
         return settings.get_theming_attribute(path)
+
+
+class SearchMessageSummaryWidget(MessageSummaryWidget):
+
+    def __init__(self, mid=None, dbman=None, message=None):
+        """
+        May receive a message id and db object, or directly a message object.
+        """
+        if message:
+            self.message = message
+        else:
+            self.message = dbman.get_message(mid)
+        # TODO: handle even/odd theming passing arg below
+        MessageSummaryWidget.__init__(self, self.message, False)
+
+    def get_message(self):
+        return self.message
+
+    def refresh(self):
+        self._w = self._build_line()
