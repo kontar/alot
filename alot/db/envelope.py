@@ -13,7 +13,7 @@ from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 from email.mime.application import MIMEApplication
 import email.charset as charset
-import gpg
+#import gpg
 
 from .attachment import Attachment
 from .utils import encode_header

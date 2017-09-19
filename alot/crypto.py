@@ -5,7 +5,7 @@
 # For further details see the COPYING file
 from __future__ import absolute_import
 
-import gpg
+# import gpg
 
 from .errors import GPGProblem, GPGCode
 

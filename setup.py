@@ -46,8 +46,7 @@ setup(
         'urwidtrees>=1.0',
         'twisted>=10.2.0',
         'python-magic',
-        'configobj>=4.7.0',
-        'gpg'
+        'configobj>=4.7.0'
     ],
     tests_require=[
         'mock',
