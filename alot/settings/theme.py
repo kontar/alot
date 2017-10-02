@@ -121,7 +121,7 @@ class Theme(object):
             partsec = match.get(part) or {}
 
             def fill(key, fallback=None):
-                pvalue = partsec.get(key) or defaultsec.get(key)
+                pvalue = partsec.get(key) or defaultsec.get(key) or match.get(key) or default.get(key)
                 return pvalue or fallback
 
             res[part] = {}

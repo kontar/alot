@@ -31,8 +31,8 @@
         # mailcount, tags, and subject.
         parts = string_list(default=None)
         [[[__many__]]]
-            normal = attrtriple
-            focus = attrtriple
+            normal = attrtriple(default=None)
+            focus = attrtriple(default=None)
             width = widthtuple(default=None)
             alignment = align(default='left')
     [[__many__]]
